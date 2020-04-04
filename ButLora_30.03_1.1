@@ -1,0 +1,23 @@
+//Задание
+//вариант1
+
+function sum(n) {
+    let sumMa = 0;
+    for (let i = 1; i <= n; i++) {
+        sumMa += i;
+    }
+    return sumMa;
+}
+
+//вариант 2
+
+ function sum(n) {
+    if (n == 1) return 1;
+    return n + sum(n - 1);
+}
+
+// вариант 3
+
+function sum(n){
+    return n * (n + 1) / 2;
+ }
