@@ -14,16 +14,17 @@ function sum(a, b){
 // 2 вариант без проверки
  
  
- let args = [];
- let sum = 0;
+let args = [];
+let sum = 0;
 
- function add(arg) {
+function add(arg) {
+let ab = parseFloat(arg);
 
-    args.push(arg);
-    
-    sum  = args.reduce( (a, b) => a + b);
-    
-    console.log('sum = ' + sum);
+args.push(ab);
+
+sum = args.reduce((a, b) => a + b);
+
+console.log("sum = " + sum);
 }
 
 
