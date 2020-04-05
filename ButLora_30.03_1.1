@@ -11,7 +11,20 @@ function sum(a, b){
 
 
 
+// 2 вариант без проверки
+ 
+ 
+ let args = [];
+ let sum = 0;
 
+ function add(arg) {
+
+    args.push(arg);
+    
+    sum  = args.reduce( (a, b) => a + b);
+    
+    console.log('sum = ' + sum);
+}
 
 
 
