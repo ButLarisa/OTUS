@@ -1,5 +1,37 @@
 //Задание
 
+let args = [];
+let sum = 0;
+
+function add(arg) {
+    var ab = parseFloat(arg);
+    args.push(ab);
+    if (arg !== undefined ) {
+        sum = args.reduce((a, b) => a + b);
+        console.log("sum = " + sum);
+    } else {
+        return (c) => {
+            return c + a;
+            }
+        }
+}
+
+add(1);
+add(-1);
+add(3);
+add( );
+
+
+
+
+
+
+
+
+
+
+//С двумя аргументами
+
 function sum(a, b){
     if(b === undefined){
         return (c) => {
