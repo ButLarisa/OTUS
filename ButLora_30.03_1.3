@@ -31,13 +31,13 @@
 
 
 <script>
-    let el = document.querySelector('body div.Three > ul');
-    let getPath = el.querySelectorAll('li:first-child');
+        let getPath = function() {
+            let dir = document.querySelector('body div.Three > ul');
+            let el = dir.querySelectorAll('li:first-child');
+            console.log(el);
+        };
 
-  
-    for (let elem of getPath) {
-        alert(elem.innerHTML);  // "тест", "пройден"
-    }
+        getPath();  
 </script>
 </body>
 </html
