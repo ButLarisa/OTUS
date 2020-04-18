@@ -28,13 +28,16 @@
 
 
 <script>
-        let getPath = function() {
-            let dir = document.querySelector('body div.Three > ul');
-            let el = dir.querySelectorAll('li:first-child');
-            console.log(el);
-        };
 
-        getPath();  
+let dir = document.querySelector('body div.Three'); 
+console.log( getPath(dir) );           
+let el = dir.querySelector('ul li:first-child');    
+console.log( getPath(el) );  
+
+     function getPath(dir, el) {
+        return dir;
+        };
 </script>
+
 </body>
 </html
