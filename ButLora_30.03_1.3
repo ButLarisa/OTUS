@@ -28,15 +28,28 @@
 
 
 <script>
+    let dir = document.querySelector('body div.Three');
+    let element = dir.querySelector('ul li:first-child');
 
-let dir = document.querySelector('body div.Three'); 
-console.log( getPath(dir) );           
-let el = dir.querySelector('ul li:first-child');    
-console.log( getPath(el) );  
+    const getPath = (el) => {
+        let path = [], parent;
+        while (parent = el.parentNode) {
+            let tag = el.tagName, siblings;
+            path.unshift(
+                el.id ? `#${el.id}` : (
+                    siblings = parent.children,
+                        [].filter.call(siblings, sibling => sibling.tagName === tag).length === 1 ? tag :
+                            `${tag}:nth-child(${1+[].indexOf.call(siblings, el)})`
+                )
+            );
+            el = parent;
+        };
+        return `${path.join(' > ')}`.toLowerCase();
+    };
 
-     function getPath(dir) {
-        return dir;
-        }
+    getPath(element);
+    //console.log(getPath(element));
+    
 </script>
 
 </body>
